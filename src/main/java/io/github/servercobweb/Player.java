@@ -113,6 +113,7 @@ public class Player {
                 }
 
                 this.transfer(ev.getAddress(), ev.getPort());
+                this.isFirstTimeLogin = true;
                 break;
             case ProtocolInfo.PLAY_STATUS_PACKET:
                 PlayStatusPacket pk = (PlayStatusPacket)packet;
